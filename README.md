@@ -12,3 +12,9 @@ Installation
 127.0.0.1 backend.localhost
 ```
 1. Open http://frontend.localhost , http://backend.localhost 
+1. Run `docker-compose exec php ./yii user/reset-admin-password admin` to reset admin password to `admin`
+1. Login with
+```
+    admin
+    admin
+```
