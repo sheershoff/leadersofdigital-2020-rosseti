@@ -53,6 +53,10 @@ AppAsset::register($this);
             'label' => 'Devices',
             'url' => ['/device'],
         ];
+        $menuItems[] = [
+            'label' => "Devices Fingerprints",
+            'url' => ['/device-fingerprint'],
+        ];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(

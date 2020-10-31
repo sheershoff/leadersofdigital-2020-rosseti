@@ -9,4 +9,15 @@ INSERT INTO yii2.device (id, user_id, name, address, created_at, updated_at) VAL
 INSERT INTO yii2.device (id, user_id, name, address, created_at, updated_at) VALUES (3, 1, 'Стиральная машина OVIDIUS', '', 1604156188, 1604156188);
 INSERT INTO yii2.device (id, user_id, name, address, created_at, updated_at) VALUES (4, 1, 'Микроволновая печь PLATO', '', 1604156224, 1604156224);
 INSERT INTO yii2.device (id, user_id, name, address, created_at, updated_at) VALUES (5, 1, 'Тёплый пол LAVA', '', 1604156240, 1604156240);
+TRUNCATE TABLE device_fingerprint;
+INSERT INTO yii2.device_fingerprint (id, device_id, consumed, i, cos_phi, noise_50, noise_100, noise_200, noise_400, noise_800) VALUES  (1, 1,  1, 0.3, 0.5, 1000, 1000, 1000, 100, 0);
+INSERT INTO yii2.device_fingerprint (id, device_id, consumed, i, cos_phi, noise_50, noise_100, noise_200, noise_400, noise_800) VALUES  (2, 2,  0,   1, 0.5, 1500, 1000, 4000, 100, 10);
+INSERT INTO yii2.device_fingerprint (id, device_id, consumed, i, cos_phi, noise_50, noise_100, noise_200, noise_400, noise_800) VALUES  (3, 3,  1,   2, 0.5, 2000, 1500, 5000, 150, 20);
+INSERT INTO yii2.device_fingerprint (id, device_id, consumed, i, cos_phi, noise_50, noise_100, noise_200, noise_400, noise_800) VALUES  (4, 4,  6, 2.5, 0.5, 3000, 3000, 4500, 300, 15);
+INSERT INTO yii2.device_fingerprint (id, device_id, consumed, i, cos_phi, noise_50, noise_100, noise_200, noise_400, noise_800) VALUES  (5, 5,  1,   4, 0.5, 4000, 2000, 7000, 200, 30);
+INSERT INTO yii2.device_fingerprint (id, device_id, consumed, i, cos_phi, noise_50, noise_100, noise_200, noise_400, noise_800) VALUES  (6, 1,  2, 0.3, 0.5, 1200,  600, 2000,   5, 0);
+INSERT INTO yii2.device_fingerprint (id, device_id, consumed, i, cos_phi, noise_50, noise_100, noise_200, noise_400, noise_800) VALUES  (7, 2,  0,   1, 0.5, 1100, 1400, 1000,   8, 0);
+INSERT INTO yii2.device_fingerprint (id, device_id, consumed, i, cos_phi, noise_50, noise_100, noise_200, noise_400, noise_800) VALUES  (8, 3,  2,   2, 0.5, 2400,  800, 1000,   3, 0);
+INSERT INTO yii2.device_fingerprint (id, device_id, consumed, i, cos_phi, noise_50, noise_100, noise_200, noise_400, noise_800) VALUES  (9, 4, 12, 2.5, 0.5, 3400,   20, 1500,   3, 5);
+INSERT INTO yii2.device_fingerprint (id, device_id, consumed, i, cos_phi, noise_50, noise_100, noise_200, noise_400, noise_800) VALUES (10, 5,  2,   4, 0.5, 2000, 1000,  700,   5, 0);
 SET FOREIGN_KEY_CHECKS = 1;

@@ -7,9 +7,9 @@ docker-init-project:     ## For docker: init project after cloning
 	make docker-composer-install
 	make docker-yii-init
 	make docker-migrate
-	chgrp 33 backend/views
-	chgrp 33 backend/controllers
-	chgrp 33 common/models
+	sudo chgrp 33 backend/views
+	sudo chgrp 33 backend/controllers
+	sudo chgrp 33 common/models
 
 docker-composer-install: ## For docker: install dependencies
 	docker-compose exec -T php composer i --prefer-dist
