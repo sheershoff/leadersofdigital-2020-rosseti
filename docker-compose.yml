@@ -73,6 +73,6 @@ services:
       # BLACKFIRE_SERVER_ID: SERVER-ID
       # BLACKFIRE_SERVER_TOKEN: SERVER-TOKEN
 
-  selenium-chrome:
-    image: selenium/standalone-chrome
-    shm_size: "2G"
+#  selenium-chrome:
+#    image: selenium/standalone-chrome
+#    shm_size: "2G"
