@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
 use backend\assets\AppAsset;
@@ -36,11 +37,22 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
+        [
+            'label' => 'Home',
+            'url' => ['/site/index']
+        ],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
+        $menuItems[] = [
+            'label' => 'Sensors',
+            'url' => ['/sensor'],
+        ];
+        $menuItems[] = [
+            'label' => 'Devices',
+            'url' => ['/device'],
+        ];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(

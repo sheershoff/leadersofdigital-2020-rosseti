@@ -1,0 +1,12 @@
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE sensor_data;
+TRUNCATE TABLE sensor;
+INSERT INTO sensor (id, user_id, name, address, created_at, updated_at) VALUES (1, 1, 'Home', 'Surrey county, Little Whinging village, 4 Privet st.', 1604150884, 1604150884);
+INSERT INTO sensor (id, user_id, name, address, created_at, updated_at) VALUES (2, 1, 'Hogwarts', 'Scotland, Hogwarts', 1604150940, 1604150940);
+TRUNCATE TABLE device;
+INSERT INTO yii2.device (id, user_id, name, address, created_at, updated_at) VALUES (1, 1, 'Холодильник ACME', '', 1604156101, 1604156144);
+INSERT INTO yii2.device (id, user_id, name, address, created_at, updated_at) VALUES (2, 1, 'Фен AJAX', '', 1604156129, 1604156152);
+INSERT INTO yii2.device (id, user_id, name, address, created_at, updated_at) VALUES (3, 1, 'Стиральная машина OVIDIUS', '', 1604156188, 1604156188);
+INSERT INTO yii2.device (id, user_id, name, address, created_at, updated_at) VALUES (4, 1, 'Микроволновая печь PLATO', '', 1604156224, 1604156224);
+INSERT INTO yii2.device (id, user_id, name, address, created_at, updated_at) VALUES (5, 1, 'Тёплый пол LAVA', '', 1604156240, 1604156240);
+SET FOREIGN_KEY_CHECKS = 1;

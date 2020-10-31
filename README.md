@@ -16,3 +16,4 @@ Installation
     admin
     admin
 ```
+1. `make docker-sensor-import` - import test sensor data

@@ -1,5 +1,8 @@
 .DEFAULT_GOAL := help
 
+docker-sensor-import:    ## For docker: reset and import sensor data from files in ./sensor-data
+	docker-compose exec php ./yii sensor/reset-and-import
+
 docker-init-project:     ## For docker: init project after cloning
 	make docker-composer-install
 	make docker-yii-init
