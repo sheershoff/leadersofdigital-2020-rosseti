@@ -11,13 +11,6 @@ use Yii;
  * @property int $tstamp
  * @property int $sensor_id
  * @property float $consumed J = W*s
- * @property float $i A
- * @property float $cos_phi
- * @property float $noise_50
- * @property float $noise_100
- * @property float $noise_200
- * @property float $noise_400
- * @property float $noise_800
  *
  * @property Device $device
  * @property Sensor $sensor
@@ -38,9 +31,9 @@ class DeviceData extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['device_id', 'tstamp', 'sensor_id', 'consumed', 'i', 'cos_phi', 'noise_50', 'noise_100', 'noise_200', 'noise_400', 'noise_800'], 'required'],
+            [['device_id', 'tstamp', 'sensor_id', 'consumed'], 'required'],
             [['device_id', 'tstamp', 'sensor_id'], 'integer'],
-            [['consumed', 'i', 'cos_phi', 'noise_50', 'noise_100', 'noise_200', 'noise_400', 'noise_800'], 'number'],
+            [['consumed'], 'number'],
             [['device_id', 'tstamp'], 'unique', 'targetAttribute' => ['device_id', 'tstamp']],
             [['device_id'], 'exist', 'skipOnError' => true, 'targetClass' => Device::className(), 'targetAttribute' => ['device_id' => 'id']],
             [['sensor_id'], 'exist', 'skipOnError' => true, 'targetClass' => Sensor::className(), 'targetAttribute' => ['sensor_id' => 'id']],
@@ -57,13 +50,6 @@ class DeviceData extends \yii\db\ActiveRecord
             'tstamp' => Yii::t('app', 'Tstamp'),
             'sensor_id' => Yii::t('app', 'Sensor ID'),
             'consumed' => Yii::t('app', 'J = W*s'),
-            'i' => Yii::t('app', 'A'),
-            'cos_phi' => Yii::t('app', 'Cos Phi'),
-            'noise_50' => Yii::t('app', 'Noise 50'),
-            'noise_100' => Yii::t('app', 'Noise 100'),
-            'noise_200' => Yii::t('app', 'Noise 200'),
-            'noise_400' => Yii::t('app', 'Noise 400'),
-            'noise_800' => Yii::t('app', 'Noise 800'),
         ];
     }
 

@@ -56,13 +56,6 @@ class m201031_082225_add_table_sensor extends Migration
             'tstamp' => 'INT UNSIGNED NOT NULL',
             'sensor_id' => 'BIGINT UNSIGNED NOT NULL',
             'consumed' => "FLOAT UNSIGNED NOT NULL COMMENT 'J = W*s'",
-            'i' => "FLOAT NOT NULL COMMENT 'A'",
-            'cos_phi' => "FLOAT NOT NULL",
-            'noise_50' => "FLOAT NOT NULL",
-            'noise_100' => "FLOAT NOT NULL",
-            'noise_200' => "FLOAT NOT NULL",
-            'noise_400' => "FLOAT NOT NULL",
-            'noise_800' => "FLOAT NOT NULL",
         ]);
 
         $this->addPrimaryKey('pk_devicedata', '{{%device_data}}', ['device_id', 'tstamp']);
