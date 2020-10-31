@@ -22,3 +22,8 @@ Installation
     admin
 ```
 1. `make docker-sensor-import` - import test sensor data
+
+Парсинг данных
+==============
+
+1. `docker-compose exec php ./yii detector` - распарсит сенсоры и заполнит таблицу device_data
